@@ -1,0 +1,321 @@
+---
+title: "Importancia del monitoreo satelital en la vigilancia del medio ambiente"
+subtitle: "<br/> Marvin J. Quispe Sedano "
+author: "Especialista en GIS & Teledetección <br/><br/> <img src='../img/logos_inicio.png' alt='Arcgis' width='100' height='40'> <br/>"
+date: "Lima, 2022"
+output:
+  xaringan::moon_reader:
+    css: "../my-theme.css"
+    lib_dir: libs
+    nature:
+      highlightLines: true
+      highlightStyle: solarized-dark
+      countIncrementalSlides: true
+      
+---
+
+```{r child = "../setup.Rmd"}
+```
+
+```{r packages, echo=FALSE, message=FALSE, warning=FALSE}
+# AGREGAR PAQUETES A UTILIZAR
+
+```
+class: inverse, center, middle
+
+## FUNDAMENTOS DEL MONITOREO SATELITAL
+
+---
+
+## ¿Qué es la teledetección?
+
+- La teledetección (también llamado sensoramiento remoto) es la ciencia y tecnología mediante la cual las características de los objetos de interés pueden identificarse, medirse o analizarse **sin contacto directo** (JARS, 1993).
+
+<img src='img/teledeteccion.png' width='85%' height='85%' class='centerimage'>
+
+---
+
+## El estudio de la tierra con satélites
+
+Algunas de las ventajas que nos ofrece el uso de los satélites en el estudio del sistema Tierra son:
+
+- Mediciones constantes y rutinarias a escala global.
+- Perspectiva general de la información y a diferentes escalas.
+- Ofrecer información para aquellas áreas donde no existen mediciones terrestres de parámetros.
+- Alerta temprana sobre eventos meteorológicos, delitos ambientales, desastres inminentes, entre otros.
+- Atractivo visual de las imagenes.
+
+---
+
+class: center
+
+<br/>
+
+<img src='img/deforestacion.gif' width='100%' height='100%' class='centerimage'>
+
+
+
+### .instructions[UNA IMAGEN VALE MÁS QUE MIL PALABRAS!]
+
+---
+
+class: center
+
+<br/>
+
+<iframe width="720" height="380" src="https://www.youtube.com/embed/b4eLTYUcj7k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+### .instructions[UNA IMAGEN VALE MÁS QUE MIL PALABRAS!]
+
+---
+
+## El proceso de la teledetección
+
+<img src='img/tele-partes.png' width='95%' height='95%' class='centerimage'>
+
+---
+
+class: inverse, center, middle
+
+### BASES FÍSICAS DE LA TELEDETECCIÓN
+
+---
+
+## La radiación electromagnética
+
+- La radiación electromagnética es una combinación de campos eléctricos y magnéticos oscilantes, que se propagan a través del espacio transportando energía de un lugar a otro.
+- La radiación electromagnética se puede expresar en términos de energía, longitud de onda o frecuencia .
+
+
+<img src='img/luz-solar.gif' width='85%' height='85%' class='centerimage'>
+
+---
+
+## La radiación electromagnética
+
+- La radiación electromagnética es una combinación de campos eléctricos y magnéticos oscilantes, que se propagan a través del espacio transportando energía de un lugar a otro.
+- La radiación electromagnética se puede expresar en términos de energía, longitud de onda o frecuencia.
+
+<img src='img/radiacion-elct.gif' width='60%' height='60%' class='centerimage'>
+
+---
+
+##  Interacción onda/materia
+
+- Todas las ondas electromagnéticas se pueden reflejar, refractar, difractar, absorber, dispersar, y experimentar interferencias debido a su interacción con la materia a la hora de desplazarse.
+
+<img src='img/onda-materia1.png' width='85%' height='85%' class='centerimage'>
+
+---
+
+##  Interacción onda/materia
+
+- Antes que la radiacion electromagnética emitida por el sol (o un sensor activo) alcance la superficie terrestre, interactua con los gases y partículas presentes en la atmósfera, modificando algunas de sus características.
+
+<img src='img/onda-mat2.png' width='95%' height='95%' class='centerimage'>
+
+---
+
+## La polarización electromagnética
+
+- Es una propiedad de las ondas electromagnéticas, la cual hace referencia a su posible oscilación con más de una orientación.
+- La polarización múltiple ayuda a identificar la estructura física de las superficies reflectoras.
+
+<img src='img/polarizacion.gif' width='100%' height='100%' class='centerimage'>
+
+---
+
+## El espectro electromagnético
+
+- Es la distribución energética del conjunto de ondas electromagnéticas.
+
+<img src='img/espectro-elec.png' width='100%' height='100%' class='centerimage'>
+
+---
+
+## La irradiación solar
+
+- La irradiación solar mide la energía por unidad de área de radiación solar incidente en una superficie colocada en un lugar y tiempo especificados.
+- La radiación solar es reflejada, absorbida o dispersada por la atmósfera terrestre debido a la acción de átomos, moléculas, iones, gases disueltos y partículas en suspensión.
+
+<img src='img/irradiancia.png' width='70%' height='70%' class='centerimage'>
+
+---
+
+## La firma espectral
+
+- La firma espectral es la radiación reflejada (reflectancia), por determinada superficie, medida en función de la longitud de onda (ESA, 2014).
+- La firma espectral es única para cada elemento.
+
+<br/>
+
+<img src='img/firma-espectral.png' width='80%' height='80%' class='centerimage'>
+
+---
+
+class: inverse, center, middle
+
+### IMÁGENES SATELITALES
+
+---
+
+## ¿Qué es una imagen satelital?
+
+- Se define como la representación visual de la información capturada por un sensor montado en una plataforma artificial (también llamado satélite).
+
+<img src='img/satelites.gif' width='90%' height='90%' class='centerimage'>
+
+---
+
+
+## Satélites y sensores
+
+- El <b>satélite</b> es un objeto que ha sido puesto en órbita intencionalmente para transportar el sensor [(Ver lista completa de satélites)](https://webapps.itc.utwente.nl/sensor/default.aspx?view=allsatellites).
+- El <b>sensor</b> es el aparato que reune la tecnología necesaria para captar información a distancia en diferentes regiones del espectro, donde cada región se denomina <b>banda</b> [(Ver lista completa de sensores)](https://webapps.itc.utwente.nl/sensor/default.aspx?view=allsensors).
+
+<img src='img/satelites2.gif' width='70%' height='70%' class='centerimage'>
+
+---
+
+## Tipos de resolución <br/> de una imagen satelital
+
+<img src='img/resoluciones.png' width='100%' height='100%' class='centerimage'>
+
+---
+
+class: inverse, center, middle
+
+### SISTEMAS DE INFORMACIÓN GEOGRÁFICA (GIS)
+
+---
+
+class: center
+
+<br/>
+
+<iframe width="720" height="380" src="https://www.youtube.com/embed/JY4psw98sgo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+### .instructions[¿QUÉ SON LOS GIS?]
+
+---
+
+## ¿Qué son los GIS?
+
+Según Olaya (2014), un Sistema de Información Geográfica permite la realización las siguientes operaciones: 
+
+- Lectura, edición, almacenamiento y, en términos generales, gestión de datos espaciales. 
+- Análisis de datos espaciales, desde consultas sencillas a la elaboración de complejos modelos, y puede llevarse a cabo tanto sobre la componente espacial de los datos (la localización de cada valor o elemento) como sobre la componente temática (el valor o el elemento en sí).
+- Generación de resultados tales como mapas, informes, gráficos, etc.
+
+---
+
+## Componentes de los GIS
+
+  <img src='img/gis-comp.png' alt='componentes-gis' width='80%' height='80%' class='center'>
+  
+---
+  
+## Componentes de los GIS
+
+A la hora de definir la forma y dimensiones de la Tierra, la geodesia plantea modelos que puedan recoger la complejidad natural de la superficie terrestre y expresarla de una forma más simple y fácil de manejar (Olaya 2014).
+
+ <img src='img/geod.png' alt='geodesia' width='100%' height='100%' class='center'>
+
+---
+
+
+## La información geográfica
+
+La información geográfica es el resultado de un dato y una interpretación (Olaya 2014).  <br/>  <br/>
+
+<img src='img/infgeog.png' alt='geo-info' width='100%' height='100%' class='center'>
+
+---
+
+
+class: center
+
+<br/>
+
+<img src='img/gis_apps.png' alt='geo-info' width='100%' height='100%' class='center'>
+
+### .instructions[Aplicaciones GIS]
+
+---
+
+class: inverse, center, middle
+
+### IMPORTANCIA DEL MONITOREO SATELITAL DEL MEDIO AMBIENTE
+
+---
+
+class: center
+
+<br/>
+
+<iframe width="720" height="380" src="https://www.youtube.com/embed/pM353KXJ-WU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### .instructions[RAMI: Monitoreo de Minería con Radar]
+
+---
+
+class: center
+
+<br/>
+
+<iframe width="720" height="380" src="https://www.youtube.com/embed/3SFQD27tUDs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### .instructions[Unidad de Monitoreo Satelital del SERFOR, Perú]
+
+
+---
+
+class: center
+
+<br/>
+
+<img src='img/midagri_siea.png' alt='geo-info' width='100%' height='100%' class='center'>
+
+### .instructions[Herramientas satelitales del MIDAGRI, Perú]
+
+---
+
+class: center
+
+<br/>
+
+<img src='img/mirave_indeci.jpg' alt='geo-info' width='100%' height='100%' class='center'>
+
+### .instructions[Monitoreo de desastre en Mirave, Tacna, 2019]
+
+---
+
+class: center
+
+<br/>
+
+<img src='img/ACCA_petroleo.jpg' alt='geo-info' width='100%' height='75%' class='center'>
+
+### .instructions[Monitoreo del derrame de petróleo en el mar]
+
+---
+
+class: center
+
+<br/>
+
+<img src='img/aplicaciones.png' alt='geo-info' width='90%' height='100%' class='center'>
+
+### .instructions[Otras Aplicaciones ...]
+
+---
+
+class: inverse, center, middle
+
+# GRACIAS! <br/>  <a href="mailto: marvinjqs@gmail.com"> <img alt="gmail" src="../img/gmail-logo.gif" width='20%' height='50%'> </a> 
+
+
+
