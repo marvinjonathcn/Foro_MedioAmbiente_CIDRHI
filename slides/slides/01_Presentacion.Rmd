@@ -1,7 +1,7 @@
 ---
 title: "Importancia del monitoreo satelital en la vigilancia del medio ambiente"
 subtitle: "<br/> Marvin J. Quispe Sedano "
-author: "Especialista en GIS & Teledetección <br/><br/> <img src='../img/logos_inicio.png' alt='Arcgis' width='100' height='40'> <br/>"
+author: "Especialista en GIS & Teledetección <br/><br/> <img src='../img/logos_inicio.jpg' alt='Arcgis' width='100' height='40'> <br/>"
 date: "Lima, 2022"
 output:
   xaringan::moon_reader:
@@ -277,7 +277,7 @@ class: center
 
 <br/>
 
-<img src='img/midagri_siea.png' alt='geo-info' width='100%' height='100%' class='center'>
+<img src='img/midagri_siea.jpg' alt='geo-info' width='100%' height='100%' class='center'>
 
 ### .instructions[Herramientas satelitales del MIDAGRI, Perú]
 
